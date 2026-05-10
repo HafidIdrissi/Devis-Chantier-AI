@@ -102,15 +102,6 @@ function Btn({ children, onClick, v="primary", full=false, sm=false, disabled=fa
   );
 }
 
-function Input({ label, ...props }) {
-  return (
-    <div>
-      {label && <label style={lbSt}>{label}</label>}
-      <input style={iSt} {...props} />
-    </div>
-  );
-}
-
 function Badge({ children, color="blue" }) {
   const map = { blue:{bg:T.blueLt,c:T.blue,br:"rgba(29,78,216,.15)"}, green:{bg:T.greenLt,c:T.green,br:"rgba(22,101,52,.15)"}, gold:{bg:T.goldLt,c:T.gold,br:"rgba(180,83,9,.15)"}, red:{bg:T.redLt,c:T.red,br:"rgba(153,27,27,.15)"} };
   const m = map[color]||map.blue;
@@ -282,7 +273,7 @@ td.right{text-align:right;font-weight:600}
   <div><div class="sig-title">Bon pour accord — Signature client</div><div class="sig-line">Précédé de "Bon pour accord"</div></div>
 </div>
 <div class="footer">Généré le ${todayFr()} &nbsp;&bull;&nbsp; ${co.nom||"Entreprise BTP"} &nbsp;&bull;&nbsp; Devis non contractuel avant signature</div>
-<script>window.onload=function(){setTimeout(function(){window.print();},350);};<\/script>
+<script>window.onload=function(){setTimeout(function(){window.print();},350);};</script>
 </body></html>`;
 }
 
@@ -552,7 +543,7 @@ function Landing({ onStart }) {
             <div>
               <p style={{ fontSize:11, fontWeight:700, color:"rgba(255,255,255,.25)", textTransform:"uppercase", letterSpacing:"0.12em", marginBottom:16 }}>Produit</p>
               {["Fonctionnalités","Métiers couverts","Tarifs"].map(l=>(
-                <p key={l} style={{ marginBottom:11 }}><a href="#" style={{ fontSize:13, color:"rgba(255,255,255,.45)", textDecoration:"none", transition:"color .15s" }}>{l}</a></p>
+                <p key={l} style={{ marginBottom:11 }}><button type="button" onClick={onStart} style={{ background:"none", border:"none", cursor:"pointer", fontSize:13, color:"rgba(255,255,255,.45)", padding:0, fontFamily:T.ff, transition:"color .15s" }}>{l}</button></p>
               ))}
             </div>
             <div>
