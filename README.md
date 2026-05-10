@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Devis BTP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application web React pour aider les artisans et entreprises du BTP à générer rapidement des devis professionnels à partir d'une description de travaux ou d'une photo de chantier.
 
-## Available Scripts
+![Demo Devis BTP](assets/demo.gif)
 
-In the project directory, you can run:
+## Objectif
 
-### `npm start`
+Ce projet montre une interface complète pour préparer, ajuster et exporter un devis BTP. Il s'adresse aux entreprises de bâtiment, artisans, conducteurs de travaux et profils techniques qui veulent gagner du temps sur la préparation commerciale.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+L'application permet de :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- générer une base de devis avec l'IA à partir d'une description ou d'une image ;
+- modifier les lignes de devis : désignation, catégorie, quantité, prix HT et TVA ;
+- appliquer une remise commerciale et un acompte ;
+- renseigner les informations entreprise et client ;
+- imprimer le devis ou l'enregistrer en PDF ;
+- utiliser des modèles de prestations BTP : électricité, plomberie, peinture, maçonnerie, menuiserie et salle de bain.
 
-### `npm test`
+## Exemple PDF
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Un exemple de rendu PDF est disponible ici :
 
-### `npm run build`
+[Ouvrir l'exemple de devis BTP](assets/documents/exemple-devis-btp.pdf)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Aperçu
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Accueil
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Accueil de l'application](assets/screenshots/accueil.png)
 
-### `npm run eject`
+### Génération du devis
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Génération du devis](assets/screenshots/generation.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Edition du devis
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Edition du devis](assets/screenshots/edition.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Export PDF
 
-## Learn More
+![Export PDF](assets/screenshots/pdf.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- Create React App
+- Node.js
+- API serverless compatible Vercel
+- Génération assistée par IA via un backend sécurisé
 
-### Code Splitting
+## Lancer le projet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Installer les dépendances :
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Lancer l'application en développement :
 
-### Making a Progressive Web App
+```bash
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Lancer uniquement le frontend :
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Créer une version de production :
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Configuration
 
-### `npm run build` fails to minify
+Créer un fichier `.env` à la racine du projet avec la clé API utilisée par le backend :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```env
+GEMINI_API_KEY=votre_cle_api
+```
+
+La clé reste côté serveur et n'est pas exposée dans le navigateur.
+
+## Pourquoi ce projet
+
+J'ai développé Devis BTP pour démontrer une capacité à construire un outil métier concret : interface claire, logique de calcul, génération de documents, export PDF et intégration IA côté serveur.
+
+Ce projet peut intéresser :
+
+- une entreprise BTP qui veut digitaliser la préparation de devis ;
+- un recruteur qui cherche un profil capable de transformer un besoin métier en produit utilisable ;
+- un artisan ou une PME qui veut tester un prototype de génération de devis.
+
+## Profil
+
+Projet réalisé par Idris.
+
+Je suis intéressé par les projets web, les outils métiers et les solutions numériques pour les entreprises du BTP. Ce dépôt sert de démonstration technique et produit pour présenter mon travail.
